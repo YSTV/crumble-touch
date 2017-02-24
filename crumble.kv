@@ -21,17 +21,26 @@
     name_label: name_label
     userlist_layout: userlist_layout
     orientation: 'vertical'
+    padding: 5
     Label:
         id: name_label
         text: 'Circuit Name'
         font_size: '30sp'
         size_hint: 1, 0.1
-    BoxLayout:
+    StackLayout:
+        canvas.before:
+            Color:
+                rgba: 255, 255, 255, 0.15
+            Rectangle:
+                # self here refers to the widget i.e BoxLayout
+                pos: self.pos
+                size: self.size
         id: userlist_layout
-        orientation: 'vertical'
+        orientation: 'tb-lr'
+        padding: 0, 20
+        spacing: 0, 15
     BoxLayout:
         size_hint: 1, 0.2
-        padding: 5
         ToggleButton:
             text: 'Mute'
         ToggleButton:

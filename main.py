@@ -50,7 +50,7 @@ class HomeScreen(Screen):
             circuit_widget = Circuit()
             circuit_widget.name_label.text = circuit['Name']
             for user in circuit['Users']:
-                user_label = Label(text=user['Name'])
+                user_label = Label(text=user['Name'], font_size='20sp', height='20sp', size_hint=(1, None))
                 circuit_widget.userlist_layout.add_widget(user_label)
             self.circuit_grid.add_widget(circuit_widget)
 
