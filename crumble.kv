@@ -1,0 +1,39 @@
+<HomeScreen>
+    circuit_grid: circuit_grid
+    clock_label: clock_label
+    BoxLayout:
+        orientation: 'vertical'
+        GridLayout:
+            id: circuit_grid
+            cols: 4
+        BoxLayout:
+            size_hint: 1, 0.15
+            Label:
+                id: clock_label
+                text: ''
+                font_size: '25sp'
+            ToggleButton:
+                text: 'Mute All'
+            ToggleButton:
+                text: 'Deafen All'
+
+<Circuit>
+    name_label: name_label
+    userlist_layout: userlist_layout
+    orientation: 'vertical'
+    Label:
+        id: name_label
+        text: 'Circuit Name'
+        font_size: '30sp'
+        size_hint: 1, 0.1
+    BoxLayout:
+        id: userlist_layout
+        orientation: 'vertical'
+    BoxLayout:
+        size_hint: 1, 0.2
+        padding: 5
+        ToggleButton:
+            text: 'Mute'
+        ToggleButton:
+            text: 'Deafen'
+
